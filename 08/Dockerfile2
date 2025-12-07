@@ -1,0 +1,9 @@
+FROM gcc:latest
+
+RUN apt-get update && apt-get install -y procps
+
+# ENTRYPOINT в исполняемой форме
+ENTRYPOINT ["top", "-b"]
+
+# CMD в исполняемой форме
+CMD ["-n2"]

@@ -1,0 +1,10 @@
+FROM gcc:latest
+
+# Устанавливаем top
+RUN apt-get update && apt-get install -y procps
+
+# ENTRYPOINT в форме оболочки
+ENTRYPOINT top -b
+
+# CMD в форме оболочки
+CMD "-n1"
